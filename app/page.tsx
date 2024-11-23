@@ -309,7 +309,7 @@ export default function Home() {
                             className={`px-4 py-2 rounded-lg transition-colors ${
                                 mode === 'Translate'
                                     ? 'bg-blue-100 text-blue-700'
-                                    : 'hover:bg-gray-100'
+                                    : 'text-gray-700 hover:bg-gray-100'
                             }`}
                         >
                             Translate
@@ -319,7 +319,7 @@ export default function Home() {
                             className={`px-4 py-2 rounded-lg transition-colors ${
                                 mode === 'Paraphrase'
                                     ? 'bg-blue-100 text-blue-700'
-                                    : 'hover:bg-gray-100'
+                                    : 'text-gray-700 hover:bg-gray-100'
                             }`}
                         >
                             Paraphrase
@@ -438,11 +438,11 @@ export default function Home() {
                 {/* Controls Section */}
                 <div className="mt-4 space-y-4">
                     <div className="p-4 bg-white rounded-lg border">
-                        <div className="flex items-center gap-4">
+                        <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
                             <span className="text-sm text-gray-600">
                                 Style:
                             </span>
-                            <div className="flex gap-2">
+                            <div className="flex flex-wrap gap-2">
                                 {styles.map((s) => (
                                     <button
                                         key={s}
@@ -450,7 +450,7 @@ export default function Home() {
                                         className={`px-3 py-1 text-sm rounded-full transition-colors ${
                                             style === s
                                                 ? 'bg-blue-100 text-blue-700'
-                                                : 'hover:bg-gray-100'
+                                                : 'text-gray-700 hover:bg-gray-100'
                                         }`}
                                         disabled={loading}
                                     >
